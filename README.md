@@ -10,7 +10,7 @@
 ## Output 
 
 ### Wiring
-![alt text](https://github.com/vniclos/ESP32-luxometer/blob/master/images/esp32-bh1750_luxometer.jpg?raw=true "esp32 luxometer" )
+![alt text](https://github.com/vniclos/ESP32-luxometer/blob/master/images/serial.output.jpg?raw=true "esp32 luxometer" )
 
 Connections:
   - BH1750 -> ESP32 

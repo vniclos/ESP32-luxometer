@@ -91,5 +91,33 @@ LEN_ is the prefig that i use for easy change lengt of char[] and be careful whi
       filename--; \
     filename; })
 ``` 
+
+
+##### dev_bh1750.h
+
+Has tree funcions and start with  fnc_dev_bh1750_ for happy integrantion in other projects without crash
+* void fnc_dev_bh1750_message() fill human mesages 
+
+* void fnc_dev_bh1750_Setup()
+Setups pins, working mode of sensor, you can ajust some values 
+```
+  /*
+  Initializacion modes this change the resolution an time
+  DEFINE                             LUX RESOLUTION   TIME
+  BH1750_CONTINUOUS_LOW_RES_MOD      4                16ms
+  BH1750_CONTINUOUS_HIGH_RES_MODE    1                120ms (Default mode)
+  BH1750_CONTINUOUS_HIGH_RES_MODE_2: 0.5              120ms
+  BH1750_ONE_TIME_LOW_RES_MODE       4                16ms
+  BH1750_ONE_TIME_HIGH_RES_MODE      1                120ms
+  BH1750_ONE_TIME_HIGH_RES_MODE_2    0.5lux           120ms
+  */
+    Wire.begin(PIN_SDA, PIN_SLC );
+  g_dev_LuxMeter.begin(BH1750::ONE_TIME_HIGH_RES_MODE);
+  ```
+  Wire.begin(PIN_SDA, PIN_SLC );
+  g_dev_LuxMeter.begin(BH1750::ONE_TIME_HIGH_RES_MODE);
+* void fnc_dev_bh1750_Read()
+Only read values and store it in global values
+
 Contac with me on facebook 
 https://www.facebook.com/vicente.niclos

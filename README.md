@@ -27,7 +27,7 @@ Connections:
 ### intregration in your projects.
 The code are splited in tree files.
 ### main file 
-´´´ c++
+``` c++
 
 #include <Wire.h>
 #include <BH1750.h>
@@ -46,7 +46,7 @@ void loop() {
   delay(2000);
 }
 
-'''
+```
 
 Contac with me on facebook 
 https://www.facebook.com/vicente.niclos

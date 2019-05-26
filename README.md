@@ -1,6 +1,6 @@
 # ESP32 BH1750 LUXOMTER 
 
-![alt text](https://github.com/vniclos/robot-arm4-esp32/blob/master/img/robot-00.jpg "Robot ARM4X builded" )
+![alt text](https://github.com/vniclos/ESP32-luxometer/blob/master/images/esp32-bh1750_luxometer.jpg?raw=true "esp32 luxometer" )
 
 ## Hardware
 

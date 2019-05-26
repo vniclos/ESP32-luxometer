@@ -45,10 +45,22 @@ Wire.h is a standar I2C librari
 #include "_global.h"    // global variables-objects
 #include "dev_bh1750.h" // manager sensor
 void setup() {
+
+  // Show firmware name date time compilation on start
+  
+  Serial.begin(115200);
+  Serial.println("=====================================");
+  Serial.print(FILENAME);
+  Serial.print(" compiled: ");
+  Serial.print(__DATE__);
+  Serial.print(" ");
+  Serial.println(__TIME__);
+  Serial.println("=====================================");
+
+
   fnc_dev_bh1750_Setup();
 }
 void loop() {
-  // put your main code here, to run repeatedly:
   fnc_dev_bh1750_Read();
   delay(2000);
 }

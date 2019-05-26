@@ -118,6 +118,22 @@ Setups pins, working mode of sensor, you can ajust some values
   g_dev_LuxMeter.begin(BH1750::ONE_TIME_HIGH_RES_MODE);
 * void fnc_dev_bh1750_Read()
 Only read values and store it in global values
+```
 
+
+void fnc_dev_bh1750_Read() {
+  {
+   
+   g_dev_LuxMeter_luxValue = g_dev_LuxMeter.readLightLevel();
+   fnc_dev_bh1750_message(); // call for fill human messages
+
+    Serial.print("Light: ");
+    Serial.print(g_dev_LuxMeter_luxValue);
+    Serial.print(" lx, level: ");
+    Serial.println(g_dev_LuxMeter_luxlevelMsg);
+
+  }
+}
+```
 Contac with me on facebook 
 https://www.facebook.com/vicente.niclos

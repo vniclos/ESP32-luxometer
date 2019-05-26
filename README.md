@@ -55,5 +55,28 @@ void loop() {
 
 ```
 
+##### defines.h
+
+Config pins for use SDA and SLC, in ESP32 21 and 22 are the pins in ESP-32 dev kit v2 modulo, but is posible you need change it.
+LEN_ is the prefig that i use for easy change lengt of char[] and be careful whit sizes
+
+``` c++
+
+#define PIN_SDA 21
+#define PIN_SLC 22
+#define LEN_LUXVALUEMSG 4
+#define LEN_LUXLEVELMSG 32
+
+
+// I use this macro for get only firmware filename for debug proposits and get it when i use OTA, it  is not necesary for this project
+#define FILENAME ({ \
+    const char* filename_start = __FILE__; \
+    const char* filename = filename_start; \
+    while(*filename != '\0') \
+      filename++; \
+    while((filename != filename_start) && (*(filename - 1) != '\\')) \
+      filename--; \
+    filename; })
+``` 
 Contac with me on facebook 
 https://www.facebook.com/vicente.niclos

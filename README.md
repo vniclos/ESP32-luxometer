@@ -26,20 +26,27 @@ Connections:
 
 ### intregration in your projects.
 The code are splited in tree files.
-### main file 
+##### main file 
+Are very simple,  for good maintinence and easy intregration in other project, Only need includes and one line in setup and other in loop
+
+_defines.h has constants for configuration
+
+_global.h has declaration of global variables and objects (I use g_ as prefij)
+
+_dev_bh1740.has manager and function for use sensor, (I use  fnc_dev_bh1750_ as prefij)
+
+BH1750.h you can download from https://github.com/claws/BH1750 or inside libraries folder of this project
+Wire.h is a standar I2C librari
 ``` c++
 
 #include <Wire.h>
 #include <BH1750.h>
-
 #include "_defines.h"   // my defines
 #include "_global.h"    // global variables-objects
 #include "dev_bh1750.h" // manager sensor
-
 void setup() {
   fnc_dev_bh1750_Setup();
 }
-
 void loop() {
   // put your main code here, to run repeatedly:
   fnc_dev_bh1750_Read();
